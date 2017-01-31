@@ -1,4 +1,4 @@
-/*abstract class Object
+abstract class Object
 {
   PVector pos;
   PVector forward;
@@ -11,4 +11,4 @@
   
   abstract void update();  
   abstract void render();
-} */
+} 
