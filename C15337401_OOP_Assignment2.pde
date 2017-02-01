@@ -5,7 +5,10 @@ void setup()
 {
   fullScreen();
   background = loadImage("Stage1.jpg");
-  Sprite = loadImage("Sprite.gif");
+  Sprite[0] = loadImage("sprite1.png");
+  Sprite[1] = loadImage("sprite2.png");
+  Sprite[2] = loadImage("sprite3.png");
+  frameRate(60);
   
   
 
@@ -13,7 +16,7 @@ void setup()
 int frames = 3; 
 int currframe = 0;
 PImage background;
-PImage Sprite;
+PImage Sprite[] = new PImage[3];
 
 
 
@@ -31,11 +34,21 @@ void draw()
     
   }*/
   image(background,0,0);
-  image(Sprite,width/2,height/2);
+  
  
   base.display();
- 
-  
+ if(frameCount%5==0)
+ {
+  image(Sprite[0],width/2,200);
+ }
+  if(frameCount%10==0)
+ {
+ image(Sprite[1],width/2,200);
+ }
+  if(frameCount%15==0)
+ {
+  image(Sprite[2],width/2,200);
+ }
 }
     
   
