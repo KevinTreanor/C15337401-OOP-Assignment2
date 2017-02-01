@@ -1,8 +1,6 @@
 //import gifAnimation.*;
-Stage base = new Stage(0,700/*,0,700,width,700,width,710,0,710*/);
-/*Stage tier1left = new Stage();
-Stage tier1right = new Stage();*/
-//Stage tier2 = new Stage((width/2)-100,300,(width/2)+100,300,(width/2)+100,310,(width/2)-100,310);
+Stage base = new Stage(0,700);
+
 void setup()
 {
   fullScreen();
@@ -34,9 +32,9 @@ void draw()
   }*/
   image(background,0,0);
   image(Sprite,width/2,height/2);
-  base.render();
+ 
   base.display();
-  //tier2.display();
+ 
   
 }
     
