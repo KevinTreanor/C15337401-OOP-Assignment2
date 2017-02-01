@@ -24,28 +24,28 @@ void draw()
 {
   
   
-   /* currframe = (currframe+1) % frames;  // Use % to cycle through frames
+    currframe = (currframe+1) % frames;  // Use % to cycle through frames
   int offset = 0;
-  for (int x = -100; x < width; x += sprite[0].width) { 
-    image(sprite[(currframe+offset) % frames], x, -20);
+  for (int x = -100; x < width; x += Sprite[0].width) { 
+    image(Sprite[(currframe+offset) % frames], x, -20);
     offset+=2;
-    image(sprite[(currframe+offset) % frames], x, height/2);
+    image(Sprite[(currframe+offset) % frames], x, height/2);
     offset+=2;
     
-  }*/
+  }
   image(background,0,0);
   
  
   base.display();
- if(frameCount%5==0)
+ if(frameCount%13==0)
  {
   image(Sprite[0],width/2,200);
  }
-  if(frameCount%10==0)
+  if(frameCount%17==0)
  {
  image(Sprite[1],width/2,200);
  }
-  if(frameCount%15==0)
+  if(frameCount%19==0)
  {
   image(Sprite[2],width/2,200);
  }
