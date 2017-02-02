@@ -34,28 +34,23 @@ void draw()
   
  
   base.display();
+   spriteDraw();
   
-  
+  yaxis = yaxis+50;
   if(0<=axis && axis>=width&& yaxis<=550)
   {
     yaxis = yaxis+2;
     
   }
+  else if((width/8)<= axis && axis >=(width/8)+400 && yaxis<= 400)
+  {
+    yaxis = 400;
+  }
+  else
+  {
+    yaxis = 550;
+  }
   
- 
- if (keyCode == RIGHT)
- { 
-   //bools here  has to play constantly and siwtch if bool is changed
-   spriteDraw();
- }
- 
- if (keyCode == LEFT)
- { 
-    
-   image(SpriteRev[counter], axis, yaxis);
-   delay(130);
-   counter = ++counter % Sprite.length;
- }
 
  
 }
@@ -75,10 +70,9 @@ void keyPressed()
       direction = true;
      
     }
-    if(keyCode == ' ')
+    if(keyCode == UP)
      {
-         yaxis = yaxis-300;
-         spriteDraw();
+         yaxis = yaxis-200;
           
          
      }
@@ -89,7 +83,17 @@ void keyPressed()
 
 void spriteDraw()
 {
+  if(direction == false)
+  {
   image(Sprite[counter], axis, yaxis);
    delay(125);
    counter = ++counter % Sprite.length;
+  }
+  else
+  {
+     image(SpriteRev[counter], axis, yaxis);
+   delay(130);
+   counter = ++counter % Sprite.length;
+    
+  }
 }
