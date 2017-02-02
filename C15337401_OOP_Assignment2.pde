@@ -1,3 +1,5 @@
+import processing.sound.*;
+
 Stage base = new Stage(0,700);
 
 void setup()
@@ -12,7 +14,8 @@ void setup()
   SpriteRev[2] = loadImage("sprite6.png");
   frameRate(60);
   
-  
+  Music = new SoundFile(this, "Threshold.mp3");
+  Music.loop();
 
 }
 boolean direction = false;
@@ -24,7 +27,7 @@ int currframe = 0;
 PImage background;
 PImage Sprite[] = new PImage[3];
 PImage SpriteRev[] = new PImage[3];
-
+SoundFile Music;
 
 
 void draw()
