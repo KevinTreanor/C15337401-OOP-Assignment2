@@ -15,6 +15,7 @@ void setup()
   
 
 }
+boolean direction = false;
 float yaxis = 549;
 float axis;
 int counter = 0;
@@ -44,10 +45,8 @@ void draw()
  
  if (keyCode == RIGHT)
  { 
-   image(Sprite[counter], axis, yaxis);
-   delay(125);
-   counter = ++counter % Sprite.length;
-   
+   //bools here  has to play constantly and siwtch if bool is changed
+   spriteDraw();
  }
  
  if (keyCode == LEFT)
@@ -67,17 +66,30 @@ void keyPressed()
     if (keyCode == RIGHT) 
     {
       axis = axis+18;
+      direction = false;
     }
     
     if (keyCode == LEFT) 
     {
       axis = axis-18;
+      direction = true;
+     
     }
     if(keyCode == ' ')
      {
-         yaxis = yaxis-15;
+         yaxis = yaxis-300;
+         spriteDraw();
+          
+         
      }
  
   }
   
+}
+
+void spriteDraw()
+{
+  image(Sprite[counter], axis, yaxis);
+   delay(125);
+   counter = ++counter % Sprite.length;
 }
