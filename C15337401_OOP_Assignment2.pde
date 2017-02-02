@@ -15,7 +15,7 @@ void setup()
   
 
 }
-
+float yaxis = 549;
 float axis;
 int counter = 0;
 int frames = 3; 
@@ -33,10 +33,18 @@ void draw()
   
  
   base.display();
+  
+  
+  if(0<=axis && axis>=width&& yaxis<=550)
+  {
+    yaxis = yaxis+2;
+    
+  }
+  
  
  if (keyCode == RIGHT)
  { 
-   image(Sprite[counter], axis, 550);
+   image(Sprite[counter], axis, yaxis);
    delay(125);
    counter = ++counter % Sprite.length;
    
@@ -45,10 +53,11 @@ void draw()
  if (keyCode == LEFT)
  { 
     
-   image(SpriteRev[counter], axis, 550);
+   image(SpriteRev[counter], axis, yaxis);
    delay(130);
    counter = ++counter % Sprite.length;
  }
+
  
 }
 void keyPressed()
@@ -57,13 +66,18 @@ void keyPressed()
   {
     if (keyCode == RIGHT) 
     {
-      axis = axis+30;
+      axis = axis+18;
     }
     
     if (keyCode == LEFT) 
     {
-      axis = axis-30;
+      axis = axis-18;
     }
+    if(keyCode == ' ')
+     {
+         yaxis = yaxis-15;
+     }
+ 
   }
   
 }
