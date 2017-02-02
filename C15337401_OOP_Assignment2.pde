@@ -42,9 +42,17 @@ void draw()
     yaxis = yaxis+2;
     
   }
-  else if((width/8)<= axis && axis >=(width/8)+400 && yaxis<= 400)
+  else if((width/8)<= axis && axis <=(width/8)+400 && yaxis<= 550)
   {
-    yaxis = 400;
+    yaxis = 350;
+  }
+  else if((width-width/8)-400<= axis && axis <=(width-width/8) && yaxis<= 550)
+  {
+    yaxis = 350;
+  }
+  else if((width/2)-100<=axis && axis <= (width/2)+100 && yaxis <=350) 
+  {
+    yaxis = 150;
   }
   else
   {
@@ -72,7 +80,7 @@ void keyPressed()
     }
     if(keyCode == UP)
      {
-         yaxis = yaxis-200;
+         yaxis = yaxis-250;
           
          
      }
