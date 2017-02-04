@@ -1,6 +1,8 @@
 import processing.sound.*;
 
 Stage base = new Stage(0,700);
+Tag tag =  new Tag(100,100);
+
 
 void setup()
 {
