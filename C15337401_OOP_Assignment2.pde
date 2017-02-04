@@ -12,6 +12,9 @@ void setup()
   SpriteRev[0] = loadImage("sprite4.png");
   SpriteRev[1] = loadImage("sprite5.png");
   SpriteRev[2] = loadImage("sprite6.png");
+  Des[0] = loadImage("Des2.png");
+  
+  
   frameRate(60);
   
   Music = new SoundFile(this, "Threshold.mp3");
@@ -27,6 +30,7 @@ int currframe = 0;
 PImage background;
 PImage Sprite[] = new PImage[3];
 PImage SpriteRev[] = new PImage[3];
+PImage Des[] = new PImage[3];
 SoundFile Music;
 
 
@@ -38,6 +42,8 @@ void draw()
  
   base.display();
    spriteDraw();
+  
+  image(Des[0],0,0);
   
   yaxis = yaxis+50;
   if(0<=axis && axis>=width&& yaxis<=550)
