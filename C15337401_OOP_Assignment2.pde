@@ -12,7 +12,12 @@ void setup()
   SpriteRev[0] = loadImage("sprite4.png");
   SpriteRev[1] = loadImage("sprite5.png");
   SpriteRev[2] = loadImage("sprite6.png");
-  Des[0] = loadImage("Des2.png");
+  Des[0] = loadImage("Des1.png");
+  Des[1] = loadImage("Des2.png");
+  Des[2] = loadImage("Des3.png");
+  DesRev[0] = loadImage("Des4.png");
+  DesRev[1] = loadImage("Des5.png");
+  DesRev[2] = loadImage("Des6.png");
   
   
   frameRate(60);
@@ -22,15 +27,18 @@ void setup()
 
 }
 boolean direction = false;
+boolean directiondes = false;
 float yaxis = 549;
 float axis;
+float desyaxis = 200;
+float desaxis = width;
 int counter = 0;
 int frames = 3; 
-int currframe = 0;
 PImage background;
 PImage Sprite[] = new PImage[3];
 PImage SpriteRev[] = new PImage[3];
 PImage Des[] = new PImage[3];
+PImage DesRev[] = new PImage[3];
 SoundFile Music;
 
 
@@ -43,8 +51,7 @@ void draw()
   base.display();
    spriteDraw();
   
-  image(Des[0],0,0);
-  
+  desyaxis = desyaxis+50;
   yaxis = yaxis+50;
   if(0<=axis && axis>=width&& yaxis<=550)
   {
@@ -66,6 +73,28 @@ void draw()
   else
   {
     yaxis = 550;
+  }
+  
+  if(0<=desaxis && desaxis>=width&& desyaxis<=550)
+  {
+    desyaxis = desyaxis+2;
+    
+  }
+  else if((width/8)<= desaxis && desaxis <=(width/8)+400 && desyaxis<= 550)
+  {
+    desyaxis = 350;
+  }
+  else if((width-width/8)-400<= desaxis && desaxis <=(width-width/8) && desyaxis<= 550)
+  {
+    desyaxis = 350;
+  }
+  else if((width/2)-100<=desaxis && desaxis <= (width/2)+100 && desyaxis <=350) 
+  {
+    desyaxis = 150;
+  }
+  else
+  {
+    desyaxis = 550;
   }
   
 
@@ -93,8 +122,28 @@ void keyPressed()
           
          
      }
- 
   }
+     
+    if (key == 'd'|| key == 'D') 
+    {
+      desaxis = desaxis+18;
+      directiondes = true;
+    }
+    
+    if (key == 'a' || key == 'A') 
+    {
+      desaxis = desaxis-18;
+      directiondes = false;
+     
+    }
+    if(key == 'w' || key == 'B')
+     {
+         desyaxis = desyaxis-250;
+          
+         
+     }
+ 
+  
   
 }
 
@@ -109,8 +158,22 @@ void spriteDraw()
   else
   {
      image(SpriteRev[counter], axis, yaxis);
-   delay(130);
-   counter = ++counter % Sprite.length;
+   delay(125);
+   counter = ++counter % SpriteRev.length;
+    
+  }
+  
+  if(directiondes == false)
+  {
+  image(Des[counter], desaxis, desyaxis);
+   delay(125);
+   counter = ++counter % Des.length;
+  }
+  else
+  {
+     image(DesRev[counter], desaxis, desyaxis);
+   delay(125);
+   counter = ++counter % DesRev.length;
     
   }
 }
