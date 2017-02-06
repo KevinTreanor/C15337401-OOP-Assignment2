@@ -55,7 +55,10 @@ class Tag {
           fill(93,239,224,100);
           ellipse(pos.x,pos.y,rad,rad);
           popMatrix();
-          tagged = false;
+          if((desaxis-100) <= axis && axis <= (desaxis+100))
+          {
+            tagged = false;
+          }
         }
       }
     
