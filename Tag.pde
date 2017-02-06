@@ -2,7 +2,7 @@ class Tag {
   
   PVector pos;
   float x,y;
-  float rad = 100;
+  float rad = 200;
   boolean tagged;
   
    Tag(float x, float y)
@@ -14,9 +14,13 @@ class Tag {
   void display()
   {
     pushMatrix();
+    translate((axis-30),(yaxis-20));
     stroke(0,0,255);
     fill(93,239,224,100);
     ellipse(pos.x,pos.y,rad,rad);
+    popMatrix();
+    
+    pushMatrix();
     translate((axis+50),(yaxis-50));
     
     stroke(0);
