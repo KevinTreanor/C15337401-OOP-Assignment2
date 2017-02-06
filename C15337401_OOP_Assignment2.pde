@@ -22,7 +22,7 @@ void setup()
   DesRev[2] = loadImage("Des6.png");
   
   
-  frameRate(120);
+  frameRate(1);
   
   Music = new SoundFile(this, "Threshold.mp3");
   Music.loop();
