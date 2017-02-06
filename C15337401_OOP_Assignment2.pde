@@ -32,7 +32,7 @@ boolean direction = false;
 boolean directiondes = false;
 float yaxis = 549;
 float axis;
-float desyaxis = 200;
+float desyaxis = 549;
 float desaxis = width;
 int counter = 0;
 int frames = 3; 

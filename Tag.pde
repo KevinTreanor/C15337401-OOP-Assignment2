@@ -17,7 +17,7 @@ class Tag {
     stroke(0,0,255);
     fill(93,239,224,100);
     ellipse(pos.x,pos.y,rad,rad);
-    translate(axis,yaxis);
+    translate((axis+50),(yaxis-50));
     
     stroke(0);
     strokeWeight(3);
