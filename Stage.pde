@@ -1,7 +1,6 @@
 class Stage{
   
   PVector Pos;
-  PShape stage;
   float x,y;
   float x1 =0;
   float y1 = 700;

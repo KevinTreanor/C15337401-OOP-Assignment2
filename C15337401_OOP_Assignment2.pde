@@ -46,13 +46,14 @@ SoundFile Music;
 
 void draw()
 {
-  
+  tag.game();
   image(background,0,0);
-  
+  fill(0,125,125,50);
+  stroke(0);
  
   base.display();
    spriteDraw();
-  
+ 
   desyaxis = desyaxis+50;
   yaxis = yaxis+50;
   if(0<=axis && axis>=width&& yaxis<=550)
@@ -108,13 +109,14 @@ void keyPressed()
   {
     if (keyCode == RIGHT) 
     {
-      axis = axis+18;
+     // translate(axis,12);
+      axis = axis+12;
       direction = false;
     }
     
     if (keyCode == LEFT) 
     {
-      axis = axis-18;
+      axis = axis-12;
       direction = true;
      
     }
@@ -128,13 +130,13 @@ void keyPressed()
      
     if (key == 'd'|| key == 'D') 
     {
-      desaxis = desaxis+18;
+      desaxis = desaxis+12;
       directiondes = true;
     }
     
     if (key == 'a' || key == 'A') 
     {
-      desaxis = desaxis-18;
+      desaxis = desaxis-12;
       directiondes = false;
      
     }
