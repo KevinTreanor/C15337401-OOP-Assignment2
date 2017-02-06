@@ -22,7 +22,7 @@ void setup()
   DesRev[2] = loadImage("Des6.png");
   
   
-  frameRate(1);
+  frameRate(120);
   
   Music = new SoundFile(this, "Threshold.mp3");
   Music.loop();
@@ -33,7 +33,7 @@ boolean directiondes = false;
 float yaxis = 549;
 float axis;
 float desyaxis = 549;
-float desaxis = width;
+float desaxis = 1250;
 int counter = 0;
 int frames = 3; 
 PImage background;
