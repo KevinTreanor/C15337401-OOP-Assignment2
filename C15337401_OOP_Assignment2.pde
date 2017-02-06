@@ -30,6 +30,7 @@ void setup()
 }
 boolean direction = false;
 boolean directiondes = false;
+boolean[] keys = new boolean[1000]; 
 float yaxis = 549;
 float axis = 2;
 float desyaxis = 549;
@@ -42,6 +43,7 @@ PImage SpriteRev[] = new PImage[3];
 PImage Des[] = new PImage[3];
 PImage DesRev[] = new PImage[3];
 SoundFile Music;
+
 
 
 void draw()
@@ -126,52 +128,25 @@ void draw()
 
  
 }
+
+boolean checkKey(int k)
+{
+  if (keys.length >= k) 
+  {
+    return keys[k] || keys[Character.toUpperCase(k)];  
+  }
+  return false;
+  
+}
+
 void keyPressed()
 {
-  if (key == CODED) 
-  {
-    if (keyCode == RIGHT) 
-    {
-     // translate(axis,12);
-      axis = axis+12;
-      direction = false;
-    }
-    
-    if (keyCode == LEFT) 
-    {
-      axis = axis-12;
-      direction = true;
-     
-    }
-    if(keyCode == UP)
-     {
-         yaxis = yaxis-250;
-          
-         
-     }
-  }
-     
-    if (key == 'd'|| key == 'D') 
-    {
-      desaxis = desaxis+12;
-      directiondes = true;
-    }
-    
-    if (key == 'a' || key == 'A') 
-    {
-      desaxis = desaxis-12;
-      directiondes = false;
-     
-    }
-    if(key == 'w' || key == 'B')
-     {
-         desyaxis = desyaxis-250;
-          
-         
-     }
- 
+  keys[keyCode] = false;
   
   
+}
+void keyReleased(){
+  keys[keyCode] = true;
 }
 
 void spriteDraw()
