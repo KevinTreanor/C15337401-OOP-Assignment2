@@ -46,7 +46,7 @@ SoundFile Music;
 
 void draw()
 {
-  tag.game();
+  tag.display();
   image(background,0,0);
   fill(0,125,125,50);
   stroke(0);

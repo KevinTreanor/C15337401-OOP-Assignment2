@@ -3,8 +3,6 @@ class Tag
   int lives;
   PVector pos;
   float x,y;
-  float x1=100;
-  float y1 = 100;
   float rad = 100;
   PShape tagged;
   
@@ -14,11 +12,11 @@ class Tag
  
   }
   
-  void game()
+  void display()
   {
-    noStroke();
+    stroke(0,0,255);
     fill(93,239,224);
-    ellipse(x1,y1,rad,rad);
+    ellipse(pos.x,pos.y,rad,rad);
     
   }
   
