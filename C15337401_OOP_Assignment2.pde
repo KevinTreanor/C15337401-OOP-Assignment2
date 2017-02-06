@@ -46,10 +46,13 @@ SoundFile Music;
 
 void draw()
 {
-  tag.display();
+  
   image(background,0,0);
+  tag.display();
+  strokeWeight(1);
   fill(0,125,125,50);
   stroke(0);
+  
  
   base.display();
    spriteDraw();
