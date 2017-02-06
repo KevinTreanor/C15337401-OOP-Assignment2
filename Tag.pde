@@ -28,7 +28,10 @@ class Tag {
             fill(93,239,224,100);
             ellipse(pos.x,pos.y,rad,rad);
             popMatrix();
-            tagged = true;
+            if((axis-100) <= desaxis && desaxis <= (axis+100))
+            {
+              tagged = true;
+            }
           }
         }
       }

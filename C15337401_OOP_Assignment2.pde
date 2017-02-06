@@ -31,7 +31,7 @@ void setup()
 boolean direction = false;
 boolean directiondes = false;
 float yaxis = 549;
-float axis;
+float axis = 2;
 float desyaxis = 549;
 float desaxis = 1250;
 int counter = 0;
@@ -55,7 +55,27 @@ void draw()
   
  
   base.display();
-   spriteDraw();
+  spriteDraw();
+ //Keeps players inside stage
+ if(axis>=1350)
+ {
+   axis = 1;
+ }
+ 
+ if(axis<=0)
+ {
+   axis = 1349;
+ }
+ if(desaxis>=1350)
+ {
+   desaxis = 1;
+ }
+ 
+ if(desaxis<=0)
+ {
+   desaxis = 1349;
+ }
+ 
  
   desyaxis = desyaxis+50;
   yaxis = yaxis+50;
