@@ -39,59 +39,6 @@ class Player extends Object
   
   void update()
   {
-    //Key codes
-    if (checkKey('a'))
-    {
-      theta -= 0.05f;
-    }
-    if (checkKey('d'))
-    {
-      theta += 0.05f;
-    }
-/* if (key == CODED) 
-  {
-    if (keyCode == RIGHT) 
-    {
-     // translate(axis,12);
-      axis = axis+12;
-      direction = false;
-    }
-    
-    if (keyCode == LEFT) 
-    {
-      axis = axis-12;
-      direction = true;
-     
-    }
-    if(keyCode == UP)
-     {
-         yaxis = yaxis-250;
-          
-         
-     }
-}
-     
-    if (key == 'd'|| key == 'D') 
-    {
-      desaxis = desaxis+12;
-      directiondes = true;
-    }
-    
-    if (key == 'a' || key == 'A') 
-    {
-      desaxis = desaxis-12;
-      directiondes = false;
-     
-    }
-    if(key == 'w' || key == 'B')
-     {
-         desyaxis = desyaxis-250;
-          
-         
-     }
- 
-  
-  */
 
     
   }

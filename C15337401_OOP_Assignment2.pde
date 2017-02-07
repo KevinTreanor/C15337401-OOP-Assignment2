@@ -129,24 +129,50 @@ void draw()
  
 }
 
-boolean checkKey(int k)
-{
-  if (keys.length >= k) 
-  {
-    return keys[k] || keys[Character.toUpperCase(k)];  
-  }
-  return false;
-  
-}
 
 void keyPressed()
 {
-  keys[keyCode] = false;
-  
-  
+  if (key == CODED) 
+  {
+    if (keyCode == RIGHT) 
+    {
+     // translate(axis,12);
+      axis = axis+12;
+      direction = false;
+    }
+    
+    if (keyCode == LEFT) 
+    {
+      axis = axis-12;
+      direction = true;
+     
+    }
+    if(keyCode == UP)
+     {
+         yaxis = yaxis-250;
+          
+         
+     }
 }
-void keyReleased(){
-  keys[keyCode] = true;
+     
+    if (key == 'd'|| key == 'D') 
+    {
+      desaxis = desaxis+12;
+      directiondes = true;
+    }
+    
+    if (key == 'a' || key == 'A') 
+    {
+      desaxis = desaxis-12;
+      directiondes = false;
+     
+    }
+    if(key == 'w' || key == 'B')
+     {
+         desyaxis = desyaxis-250;
+          
+         
+     }
 }
 
 void spriteDraw()
