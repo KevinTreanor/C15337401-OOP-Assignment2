@@ -20,7 +20,7 @@ void setup()
   DesRev[0] = loadImage("Des4.png");
   DesRev[1] = loadImage("Des5.png");
   DesRev[2] = loadImage("Des6.png");
-  
+  smooth();
   
   frameRate(144);
   
@@ -132,49 +132,74 @@ void draw()
 
 void keyPressed()
 {
-  if (key == CODED) 
-  {
-    if (keyCode == RIGHT) 
+     
+     if (keyCode == RIGHT)  keys[0] = true;
+  if (keyCode == LEFT)  keys[1] = true;
+  if (keyCode == UP)  keys[2] = true;
+  if (key == 'd')  keys[3] = true;
+  if (key == 'a')  keys[4] = true;
+  if (key == 'w')  keys[5] = true;
+     controls();
+     
+     
+}
+void keyReleased()
+{
+  if (keyCode == RIGHT)  keys[0] = false;
+  if (keyCode == LEFT)  keys[1] = false;
+  if (keyCode == UP)  keys[2] = false;
+  if (key == 'd')  keys[3] = false;
+  if (key == 'a')  keys[4] = false;
+  if (key == 'w')  keys[5] = false;
+}
+  
+void controls()
+{
+   
+  
+    if (keys[0] == true) 
     {
      // translate(axis,12);
       axis = axis+12;
       direction = false;
     }
     
-    if (keyCode == LEFT) 
+    if (keys[1] == true) 
     {
       axis = axis-12;
       direction = true;
      
     }
-    if(keyCode == UP)
+    if(keys[2] == true)
      {
          yaxis = yaxis-250;
           
          
      }
-}
+  
      
-    if (key == 'd'|| key == 'D') 
+    if (keys[3] == true) 
     {
       desaxis = desaxis+12;
       directiondes = true;
     }
     
-    if (key == 'a' || key == 'A') 
+    if (keys[4] == true) 
     {
       desaxis = desaxis-12;
       directiondes = false;
      
     }
-    if(key == 'w' || key == 'B')
+    if(keys[5] == true)
      {
          desyaxis = desyaxis-250;
           
          
      }
 }
+  
 
+  
 void spriteDraw()
 {
   if(direction == false)
