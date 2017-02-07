@@ -7,7 +7,9 @@ Tag tag =  new Tag(100,100);
 void setup()
 {
   fullScreen();
-  background = loadImage("Stage1.jpg");
+  background[0] = loadImage("Stage1.jpg");
+  background[1]= loadImage("Stage2.jpg");
+  background[2] = loadImage("Stage3.jpg");
   Sprite[0] = loadImage("sprite1.png");
   Sprite[1] = loadImage("sprite2.png");
   Sprite[2] = loadImage("sprite3.png");
@@ -48,7 +50,7 @@ final int GAME = 1;
 final int STAGE_MENU = 2;
 final int HELP_MENU = 3;
 
-PImage background;
+PImage background[]  = new PImage[3];
 PImage Sprite[] = new PImage[3];
 PImage SpriteRev[] = new PImage[3];
 PImage Des[] = new PImage[3];
@@ -97,6 +99,21 @@ void draw()
   break;
   
   case STAGE_MENU:
+  background(255);
+  noFill();
+  rect(100,height/2,300,100);
+  text("Castle",150,height/2);
+  
+  if(100<=mouseX && mouseX <= 400 && height/2 <= mouseY && mouseY <= height/2+100)
+  {
+    background();
+    
+  
+  rect(500,height/2,300,100);
+  text("Shore",550,height/2);
+  rect(900,height/2,300,100);
+  text("Urban",950,height/2);
+  text("Back",100,700);
   break;
   
   case HELP_MENU:
@@ -114,7 +131,8 @@ void draw()
   base.display();
   spriteDraw();
   
-  fill(0);
+  fill(100,255,255);
+  textSize(20);
   text("Score1: " + Score1,100,100);
   text("Score2: " + Score2,1200,100);
   
