@@ -9,6 +9,6 @@ abstract class Object
     println("In GameObject default constructor");
   }
   
-  abstract void update();  
-  abstract void render();
+  abstract void display();  
+
 } 

@@ -1,6 +1,6 @@
-class Tag {
+class Tag extends Object{
   
-  PVector pos;
+ 
   float x,y;
   float rad = 200;
   boolean tagged = false;

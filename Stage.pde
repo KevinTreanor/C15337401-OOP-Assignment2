@@ -1,12 +1,12 @@
-class Stage{
+class Stage extends Object{
   
-  PVector Pos;
+  
   float x,y;
 
  
   Stage(float x, float y)
   {
-    Pos = new PVector(x,y);
+    pos = new PVector(x,y);
  
   }
   
@@ -16,7 +16,7 @@ class Stage{
     
 
     fill(0,125,125,50);
-    rect(Pos.x,Pos.y,width,10);
+    rect(pos.x,pos.y,width,10);
     rect(width/8,500,400,10);
     rect(width-(width/8),500,-400,10);
     rect((width/2)-100,300,200,10);
