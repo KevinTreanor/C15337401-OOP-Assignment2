@@ -59,7 +59,33 @@ SoundFile Music;
 
 void draw()
 {
+   switch(state) {
+  case MAIN_MENU:
+  background(255);
+  textSize(70);
+  text("CHASE",(width/2-120),100);
+  textSize(50);
+  fill(255);
+  rect(width/2-150,height/4,300,100);
+  fill(0);
+  text("PLAY", (width/2-70),(height/4)+70);
+  fill(255);
+  rect(width/2-150,height/2,300,100);
+  fill(0);
+  text("STAGE", (width/2-70),(height/2)+70);
+  fill(255);
+  rect(width/2-150,height*3/4,300,100);
+  fill(0);
+  text("HELP", (width/2-70),(height*3/4)+70);
+  break;
   
+  case STAGE_MENU:
+  break;
+  
+  case HELP_MENU:
+  break;
+  
+  case GAME:
   
   image(background,0,0);
   tag.display();
@@ -142,10 +168,10 @@ void draw()
     desyaxis = 550;
   }
   
+  break;
+   }
 
- 
 }
-
 
 void keyPressed()
 {
