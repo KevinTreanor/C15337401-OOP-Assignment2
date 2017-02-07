@@ -44,9 +44,9 @@ int Score1 =0;
 int Score2  = 0;
 
 final int MAIN_MENU = 0;
-final int STAGE_MENU = 1;
-final int HELP_MENU = 2;
-final int GAME = 3;
+final int GAME = 1;
+final int STAGE_MENU = 2;
+final int HELP_MENU = 3;
 
 PImage background;
 PImage Sprite[] = new PImage[3];
@@ -73,14 +73,27 @@ void draw()
   rect(width/2-150,height/4,300,100);
   fill(0);
   text("PLAY", (width/2-70),(height/4)+70);
+  if((width/2)-150<=mouseX && mouseX <= width/2+150 && height/4 <= mouseY && mouseY <= height/4+100)
+  {
+    state=1;
+  }
+  
   fill(255);
   rect(width/2-150,height/2,300,100);
   fill(0);
   text("STAGE", (width/2-70),(height/2)+70);
+  if((width/2)-150<=mouseX && mouseX <= width/2+150 && height/2 <= mouseY && mouseY <= height/2+100)
+  {
+    state=2;
+  }
   fill(255);
   rect(width/2-150,height*3/4,300,100);
   fill(0);
   text("HELP", (width/2-70),(height*3/4)+70);
+  if((width/2)-150<=mouseX && mouseX <= width/2+150 && height*3/4 <= mouseY && mouseY <= height*3/4+100)
+  {
+    state=3;
+  }
   break;
   
   case STAGE_MENU:
