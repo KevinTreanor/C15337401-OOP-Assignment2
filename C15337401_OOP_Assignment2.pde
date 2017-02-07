@@ -48,10 +48,6 @@ final int STAGE_MENU = 1;
 final int HELP_MENU = 2;
 final int GAME = 3;
 
-String Scorez1 = "Score1: " + Score1;
-String Scorez2 = "Score2: " + Score2;
-
-
 PImage background;
 PImage Sprite[] = new PImage[3];
 PImage SpriteRev[] = new PImage[3];
@@ -76,8 +72,8 @@ void draw()
   spriteDraw();
   
   fill(0);
-  text(Scorez1,100,100);
-  text(Scorez2,1200,100);
+  text("Score1: " + Score1,100,100);
+  text("Score2: " + Score2,1200,100);
   
  //Keeps players inside stage
  if(axis>=1350)
