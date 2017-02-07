@@ -12,10 +12,21 @@ class Powerup extends Object{
   
   void display() 
   {
-    fill(225,10,10);
+    strokeWeight(2);
+ 
+    fill(10,10,225,100);
     ellipse(pos.x,pos.y,50,50);
-    fill(10,10,225);
-    ellipse(pos.x,pos.y,50,50);
+    
+    if((pos.x-50) <= axis && axis <= (pos.x+50))
+          {
+            speed  = speed +8;
+          }
+    if((pos.x-50) <= desaxis && desaxis <= (pos.x+50))
+          {
+            desspeed  = desspeed +8;
+          }
+    
+    
   }
   
   

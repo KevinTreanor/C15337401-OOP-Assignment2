@@ -2,7 +2,7 @@ import processing.sound.*;
 
 Stage base = new Stage(0,700);
 Tag tag =  new Tag(100,100);
-Powerup orb = new Powerup(random(width),700);
+Powerup orb = new Powerup(680,250);
 
 
 void setup()
@@ -46,6 +46,8 @@ int state =0;
 int Score1 =0;
 int Score2  = 0;
 int back_num = 0;
+float speed = 12;
+float desspeed = 12;
 
 final int MAIN_MENU = 0;
 final int GAME = 1;
@@ -281,14 +283,14 @@ void controls()
   
     if (keys[0] == true) 
     {
-     // translate(axis,12);
-      axis = axis+12;
+     
+      axis = axis+speed;
       direction = false;
     }
     
     if (keys[1] == true) 
     {
-      axis = axis-12;
+      axis = axis-speed;
       direction = true;
      
     }
@@ -302,13 +304,13 @@ void controls()
      
     if (keys[3] == true) 
     {
-      desaxis = desaxis+12;
+      desaxis = desaxis+desspeed;
       directiondes = true;
     }
     
     if (keys[4] == true) 
     {
-      desaxis = desaxis-12;
+      desaxis = desaxis-desspeed;
       directiondes = false;
      
     }
