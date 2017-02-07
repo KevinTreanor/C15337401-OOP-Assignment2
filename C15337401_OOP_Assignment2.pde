@@ -2,6 +2,7 @@ import processing.sound.*;
 
 Stage base = new Stage(0,700);
 Tag tag =  new Tag(100,100);
+Powerup orb = new Powerup(random(width),700);
 
 
 void setup()
@@ -70,7 +71,7 @@ void draw()
   textFont(font);
   background(255);
   textSize(70);
-  text("CHASE",(width/2-90),100);
+  text("CHASE",(width/2-180),100);
   textSize(40);
   fill(255);
   rect(width/2-150,height/4,300,100);
@@ -107,13 +108,13 @@ void draw()
   
   if(100<=mouseX && mouseX <= 400 && height/2 <= mouseY && mouseY <= height/2+100)
   {
-    background(background[0]);
-    back_num = 0;
     
+    back_num = 0;
+
   }
   rect(500,height/2,300,100);
   text("Shore",550,height/2);
-  if(100<=mouseX && mouseX <= 400 && height/2 <= mouseY && mouseY <= height/2+100)
+  if(500<=mouseX && mouseX <= 800 && height/2 <= mouseY && mouseY <= height/2+100)
   {
     background(background[1]);
     back_num = 1;
@@ -122,16 +123,36 @@ void draw()
   
   rect(900,height/2,300,100);
   text("Urban",950,height/2);
-  if(100<=mouseX && mouseX <= 400 && height/2 <= mouseY && mouseY <= height/2+100)
+  if(900<=mouseX && mouseX <= 1200 && height/2 <= mouseY && mouseY <= height/2+100)
   {
     background(background[2]);
     back_num = 2;
     
   }
   text("Back",100,700);
+  if(100<=mouseX && mouseX <= 200 && 700 <= mouseY && mouseY <= 710)
+  {
+    state = 0;
+    
+  }
   break;
   
   case HELP_MENU:
+  background(255);
+  textSize(80);
+  text("Controls",300,100);
+  textSize(40);
+  text("Right: Right arrow/ d",100,200);
+  text("Left: Left arrow/ a",100,300);
+  text("Jump: Up arrow/ w",100,400);
+  text("Tag: Down arrow/ s",100,500);
+  
+  text("Back",100,700);
+  if(100<=mouseX && mouseX <= 200 && 700 <= mouseY && mouseY <= 710)
+  {
+    state = 0;
+    
+  }
   break;
   
   case GAME:
@@ -216,6 +237,13 @@ void draw()
   else
   {
     desyaxis = 550;
+  }
+  textSize(30);
+  text("Main Menu",100,750);
+  if(100<=mouseX && mouseX <= 250 && 750 <= mouseY && mouseY <= 765)
+  {
+    state = 0;
+    
   }
   
   break;
