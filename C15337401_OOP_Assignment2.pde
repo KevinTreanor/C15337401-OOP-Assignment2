@@ -44,6 +44,7 @@ int frames = 3;
 int state =0;
 int Score1 =0;
 int Score2  = 0;
+int back_num = 0;
 
 final int MAIN_MENU = 0;
 final int GAME = 1;
@@ -106,13 +107,27 @@ void draw()
   
   if(100<=mouseX && mouseX <= 400 && height/2 <= mouseY && mouseY <= height/2+100)
   {
-    background();
+    background(background[0]);
+    back_num = 0;
     
-  
+  }
   rect(500,height/2,300,100);
   text("Shore",550,height/2);
+  if(100<=mouseX && mouseX <= 400 && height/2 <= mouseY && mouseY <= height/2+100)
+  {
+    background(background[1]);
+    back_num = 1;
+    
+  }
+  
   rect(900,height/2,300,100);
   text("Urban",950,height/2);
+  if(100<=mouseX && mouseX <= 400 && height/2 <= mouseY && mouseY <= height/2+100)
+  {
+    background(background[2]);
+    back_num = 2;
+    
+  }
   text("Back",100,700);
   break;
   
@@ -121,7 +136,7 @@ void draw()
   
   case GAME:
   
-  image(background,0,0);
+  image(background[back_num],0,0);
   tag.display();
   
   strokeWeight(1);
