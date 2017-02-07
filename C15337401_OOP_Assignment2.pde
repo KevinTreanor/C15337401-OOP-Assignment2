@@ -159,6 +159,7 @@ void draw()
   
   image(background[back_num],0,0);
   tag.display();
+  orb.display();
   
   strokeWeight(1);
   fill(0,125,125,50);

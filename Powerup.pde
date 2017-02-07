@@ -13,9 +13,9 @@ class Powerup extends Object{
   void display() 
   {
     fill(225,10,10);
-    ellipse(pos.x,pos.y,100,100);
+    ellipse(pos.x,pos.y,50,50);
     fill(10,10,225);
-    ellipse(pos.x,pos.y,100,100);
+    ellipse(pos.x,pos.y,50,50);
   }
   
   
