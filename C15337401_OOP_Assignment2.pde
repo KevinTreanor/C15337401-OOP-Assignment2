@@ -31,12 +31,23 @@ void setup()
 boolean direction = false;
 boolean directiondes = false;
 boolean[] keys = new boolean[1000]; 
+
+
 float yaxis = 549;
 float axis = 2;
 float desyaxis = 549;
 float desaxis = 1250;
 int counter = 0;
 int frames = 3; 
+int state =0;
+int Score1 =0;
+int Score2  = 0;
+
+final int MAIN_MENU = 0;
+final int STAGE_MENU = 1;
+final int HELP_MENU = 2;
+final int GAME = 3;
+
 PImage background;
 PImage Sprite[] = new PImage[3];
 PImage SpriteRev[] = new PImage[3];

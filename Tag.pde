@@ -31,6 +31,7 @@ class Tag extends Object{
             if((axis-100) <= desaxis && desaxis <= (axis+100))
             {
               tagged = true;
+              Score1++;
             }
           }
         }
@@ -61,6 +62,7 @@ class Tag extends Object{
           if((desaxis-100) <= axis && axis <= (desaxis+100))
           {
             tagged = false;
+            Score2++;
           }
         }
       }
