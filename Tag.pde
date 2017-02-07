@@ -13,6 +13,7 @@ class Tag extends Object{
   
   void display()
   {
+    
     if(tagged == false)
     {
       if(keyPressed == true)

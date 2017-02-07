@@ -48,6 +48,10 @@ final int STAGE_MENU = 1;
 final int HELP_MENU = 2;
 final int GAME = 3;
 
+String Scorez1 = "Score1: " + Score1;
+String Scorez2 = "Score2: " + Score2;
+
+
 PImage background;
 PImage Sprite[] = new PImage[3];
 PImage SpriteRev[] = new PImage[3];
@@ -60,15 +64,21 @@ SoundFile Music;
 void draw()
 {
   
+  
   image(background,0,0);
   tag.display();
+  
   strokeWeight(1);
   fill(0,125,125,50);
   stroke(0);
   
- 
   base.display();
   spriteDraw();
+  
+  fill(0);
+  text(Scorez1,100,100);
+  text(Scorez2,1200,100);
+  
  //Keeps players inside stage
  if(axis>=1350)
  {
