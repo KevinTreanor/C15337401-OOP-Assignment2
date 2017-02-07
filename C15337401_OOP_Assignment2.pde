@@ -48,6 +48,7 @@ int Score2  = 0;
 int back_num = 0;
 float speed = 12;
 float desspeed = 12;
+int time  = 1000;
 
 final int MAIN_MENU = 0;
 final int GAME = 1;
@@ -158,7 +159,8 @@ void draw()
   break;
   
   case GAME:
-  
+  time++;
+   time = ++time % 1000;
   image(background[back_num],0,0);
   tag.display();
   orb.display();

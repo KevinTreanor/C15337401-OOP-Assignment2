@@ -1,6 +1,7 @@
 class Powerup extends Object{
   
   float x,y;
+  boolean spawn = true;
 
  
   Powerup(float x, float y)
@@ -12,6 +13,8 @@ class Powerup extends Object{
   
   void display() 
   {
+    if(time  >= 1000)
+    {
     strokeWeight(2);
  
     fill(10,10,225,100);
@@ -20,13 +23,18 @@ class Powerup extends Object{
     if((pos.x-50) <= axis && axis <= (pos.x+50))
           {
             speed  = speed +8;
+            Score1 = Score1+5;
+            spawn = false;
           }
     if((pos.x-50) <= desaxis && desaxis <= (pos.x+50))
           {
             desspeed  = desspeed +8;
+            Score2 = Score2+5;
+            spawn = false;
+            
           }
     
-    
+    }
   }
   
   
