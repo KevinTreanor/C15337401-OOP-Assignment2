@@ -53,6 +53,7 @@ PImage Sprite[] = new PImage[3];
 PImage SpriteRev[] = new PImage[3];
 PImage Des[] = new PImage[3];
 PImage DesRev[] = new PImage[3];
+PFont font;
 SoundFile Music;
 
 
@@ -61,10 +62,13 @@ void draw()
 {
    switch(state) {
   case MAIN_MENU:
+  
+  font = createFont("Halo.ttf",1);
+  textFont(font);
   background(255);
   textSize(70);
-  text("CHASE",(width/2-120),100);
-  textSize(50);
+  text("CHASE",(width/2-90),100);
+  textSize(40);
   fill(255);
   rect(width/2-150,height/4,300,100);
   fill(0);
