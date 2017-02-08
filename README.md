@@ -11,15 +11,15 @@ Originally I started off with the idea of a 2D fighting game using the sprites I
 
 #Key Features
 
+-*Custom player sprites made from scratch and made in different poses to give a running animation*
+
 -Help menu to show the controls
 
 -Stage selection (choice between 3 Unique backgrounds)
 
 -A fun multiplayer experience that's simple in nature but has hidden depth in the form of platforming and powerups
 
--Custom player sprites made from scratch
-
--An upbeat soundtrack that follows the flow of the game
+-An upbeat soundtrack that follows the flow of the game(8-Bit Threshold by Brian LeBarton -Scott Pilgrim Vs. The World)
 
 #Controls
 
@@ -42,7 +42,7 @@ Help Menu:
 Stage Menu:
 - The stage menu allows the user(s) to choose between the three unique backgrounds available: Castle, Shore or Urban. All three stages bring a different theme/depth to the game. The game can be left to go back out and change the background at any time.
 
--Play:
+Play:
 - This brings the user into the main game. Each player has a set of controls as listed above. The idea of the game is "tag". The player with the current arrow over their head is "tagged". This means the current player(Player 1) Has to get the Other player(Player2) into a close enough proximity to tag him/her. If achieved the "tagged" player changes and the chase continues. The Added speed up powerup that spawns on the top platform also adds a hidden depth. By nature a game of tag means the players are avoiding eachother. The adding of this powerup adds a contest for the players to race to to get a permanent(small enough that it's not broken) advantage over their opponent. Because of this a King of the Hill style event occurs at the start of every game, kind of like  a race with a risk. As well as the powerups the stage adds a platforming element to the game which adds a fun mix up to the game.
 
 
