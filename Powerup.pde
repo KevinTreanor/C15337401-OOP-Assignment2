@@ -13,7 +13,7 @@ class Powerup extends Object{
   
   void display() 
   {
-    if(time  >= 1000)
+    if(spawn == true)
     {
     strokeWeight(2);
  
