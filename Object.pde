@@ -1,3 +1,5 @@
+//Abstract Game Object Class
+
 abstract class Object
 {
   PVector pos;

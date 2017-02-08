@@ -1,5 +1,8 @@
+//Libraries
+
 import processing.sound.*;
 
+//Classes
 Stage base = new Stage(0,700);
 Tag tag =  new Tag(100,100);
 Powerup orb = new Powerup(680,250);
@@ -8,6 +11,8 @@ Powerup orb = new Powerup(680,250);
 void setup()
 {
   fullScreen();
+  
+  //Loading Custom Sprites & stages
   background[0] = loadImage("Stage1.jpg");
   background[1]= loadImage("Stage2.jpg");
   background[2] = loadImage("Stage3.jpg");
@@ -26,11 +31,13 @@ void setup()
   smooth();
   
   frameRate(144);
-  
+  //Loads Music
   Music = new SoundFile(this, "Threshold.mp3");
   Music.loop();
 
 }
+
+//Declaration of variables 
 boolean direction = false;
 boolean directiondes = false;
 boolean[] keys = new boolean[1000]; 
@@ -55,6 +62,8 @@ final int GAME = 1;
 final int STAGE_MENU = 2;
 final int HELP_MENU = 3;
 
+
+//Pimages and font
 PImage background[]  = new PImage[3];
 PImage Sprite[] = new PImage[3];
 PImage SpriteRev[] = new PImage[3];
@@ -67,14 +76,16 @@ SoundFile Music;
 
 void draw()
 {
+  //Switch to control Main menu
    switch(state) {
   case MAIN_MENU:
-  
+  //Draws Main menu
   font = createFont("Halo.ttf",1);
   textFont(font);
   background(255);
   textSize(70);
   text("CHASE",(width/2-180),100);
+  //Plays game
   textSize(40);
   fill(255);
   rect(width/2-150,height/4,300,100);
@@ -84,7 +95,7 @@ void draw()
   {
     state=1;
   }
-  
+  //Goes to stage select
   fill(255);
   rect(width/2-150,height/2,300,100);
   fill(0);
@@ -93,6 +104,7 @@ void draw()
   {
     state=2;
   }
+  //Goes to help
   fill(255);
   rect(width/2-150,height*3/4,300,100);
   fill(0);
@@ -104,6 +116,7 @@ void draw()
   break;
   
   case STAGE_MENU:
+  //Allows user to choose between 3 stages
   background(255);
   noFill();
   rect(100,height/2,300,100);
@@ -141,6 +154,7 @@ void draw()
   break;
   
   case HELP_MENU:
+  //Shows Controls
   background(255);
   textSize(80);
   text("Controls",300,100);
@@ -159,8 +173,9 @@ void draw()
   break;
   
   case GAME:
-  
+  //Main Game code
   image(background[back_num],0,0);
+  //Calls Classes and functions
   tag.display();
 
   orb.display();
@@ -171,7 +186,7 @@ void draw()
   
   base.display();
   spriteDraw();
-  
+  //Sets scores
   fill(100,255,255);
   textSize(20);
   text("Score1: " + Score1,100,100);
@@ -197,7 +212,7 @@ void draw()
    desaxis = 1349;
  }
  
- 
+ //Creates Gravity and makes the Stage exist
   desyaxis = desyaxis+50;
   yaxis = yaxis+50;
   if(0<=axis && axis>=width&& yaxis<=550)
@@ -255,7 +270,7 @@ void draw()
    }
 
 }
-
+//Booleans keyPressed and KeyRealsed allow multiple key input from the keyboard at one time
 void keyPressed()
 {
      
@@ -278,7 +293,7 @@ void keyReleased()
   if (key == 'a')  keys[4] = false;
   if (key == 'w')  keys[5] = false;
 }
-  
+//Contorls the players
 void controls()
 {
    
@@ -324,7 +339,7 @@ void controls()
      }
 }
   
-
+//Cycles through image arrays to make the custim sprites appear like they are moving
   
 void spriteDraw()
 {

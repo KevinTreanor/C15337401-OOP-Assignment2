@@ -13,7 +13,7 @@ class Stage extends Object{
   
   void display() 
   {
-    
+    //Creates the platforms for the stage
 
     fill(0,125,125,50);
     rect(pos.x,pos.y,width,10);

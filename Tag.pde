@@ -22,7 +22,7 @@ class Tag extends Object{
         {
           if(keyCode == DOWN)
           {
-      
+            //Uses booleans to "Tag" the other player and has a push and pop matrix that translates the arrow to the player
             pushMatrix();
             translate((axis-30),(yaxis-20));
             stroke(0,0,255);

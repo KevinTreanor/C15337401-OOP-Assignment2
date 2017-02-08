@@ -13,6 +13,7 @@ class Powerup extends Object{
   
   void display() 
   {
+    //Creates contestable 1 off powerup at the start of the game that increase speed 
     if(spawn == true)
     {
     strokeWeight(2);
