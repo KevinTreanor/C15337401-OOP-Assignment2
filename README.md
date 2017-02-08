@@ -2,4 +2,5 @@
 
 # Youtube Video
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/KtCRVH68Xo0" frameborder="0" allowfullscreen></iframe>
+
+[![Video](http://img.youtube.com/vi/KtCRVH68Xo0/0.jpg)](http://www.youtube.com/watch?v=KtCRVH68Xo0&feature=youtu.be)
